@@ -40,6 +40,37 @@ public class MathOperation {
 
     }
 
+    public static boolean checkprime(int n){
+        int num = n;
+        boolean flag = false;
+        for (int i = 2; i <= num / 2; ++i) {
+
+            if (num % i == 0) {
+                flag = true;
+                break;
+            }
+        }
+
+        if(!flag)
+            return true;
+        else
+            return false;
+    }
+
+    public static int sum_of_primes(int n){
+        int count=0;
+        for(int i=1;i<=n;i++){
+            if(checkprime(i)){
+                count+=i;
+            }
+        }
+        return count;
+
+    }
+
+
+
+
 }
 
 
